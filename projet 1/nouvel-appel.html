@@ -1,0 +1,45 @@
+<!doctype html>
+<!-- Pourcentage de code écrit par moi-même : 85 % -->
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nouvel appel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <img
+          src="assets/logo-blanc.png"
+          alt="Clinique des femmes de l'Outaouais — Suivi des appels"
+        />
+      </h1>
+      <nav>
+        <a href="index.html">Tableau de bord</a>
+        <a href="nouvel-appel.html">Nouvel appel</a>
+        <a href="archive.html">Archives</a>
+      </nav>
+    </header>
+
+    <main>
+      <form>
+        <h2>Ajouter un appel</h2>
+        <label for="nom">Nom</label>
+        <input id="nom" type="text" />
+        <label for="tel">Téléphone</label>
+        <input id="tel" type="tel" />
+        <label for="langue">Langue</label>
+        <select id="langue">
+          <option>Français</option>
+          <option>Anglais</option>
+          <option>Espagnol</option>
+        </select>
+        <label for="raison">Raison de l'appel</label>
+        <textarea id="raison"></textarea>
+        <label><input type="checkbox" /> Confidentialité demandée</label>
+        <button type="submit">Enregistrer</button>
+      </form>
+    </main>
+  </body>
+</html>

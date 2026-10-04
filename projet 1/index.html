@@ -1,0 +1,51 @@
+<!doctype html>
+<!-- Pourcentage de code écrit par moi-même : 75 % -->
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Suivi des appels</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>
+        <img
+          src="assets/logo-blanc.png"
+          alt="Clinique des femmes de l'Outaouais — Suivi des appels"
+        />
+      </h1>
+      <nav>
+        <a href="index.html">Tableau de bord</a>
+        <a href="nouvel-appel.html">Nouvel appel</a>
+        <a href="archive.html">Archives</a>
+      </nav>
+    </header>
+
+    <main>
+      <form>
+        <label for="service">Filtrer par service</label>
+        <select id="service">
+          <option>Tous</option>
+          <option>Contraception</option>
+          <option>Interruption de grossesse</option>
+        </select>
+      </form>
+
+      <article class="carte">
+        <h2>Marie Tremblay - 819 555-0123</h2>
+        <p>
+          <span class="etiquette">À rappeler</span>
+          <span class="etiquette">Français</span>
+          <span class="etiquette confidentiel">Confidentiel</span>
+        </p>
+        <p>Boîte vocale poste 2 — 4 oct. 2026, 8 h 42</p>
+        <p>Souhaite un rendez-vous rapidement.</p>
+        <p><em>Julie : message pris à la réception (9 h 15)</em></p>
+        <input type="text" placeholder="Ajouter une note..." />
+        <button>Ajouter</button>
+        <button>Marquer comme réglé</button>
+      </article>
+    </main>
+  </body>
+</html>

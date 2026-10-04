@@ -1,0 +1,288 @@
+/* Pourcentage de code écrit par moi-même : 30 % */
+
+:root {
+  --principale: #6b2d5c;
+  --principale-fonce: #4f1f43;
+  --principale-pale: #f4e8f1;
+  --fond: #f7f5f8;
+  --texte: #2b2530;
+  --texte-doux: #6b6472;
+  --bordure: #e5dfe9;
+  --succes: #2f855a;
+  --succes-fonce: #276749;
+  --rayon: 12px;
+  --ombre: 0 2px 8px rgba(43, 37, 48, 0.08);
+  --ombre-forte: 0 6px 18px rgba(43, 37, 48, 0.14);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--texte);
+  background: var(--fond);
+}
+
+
+header h1 {
+  margin: 0;
+}
+
+header h1 img {
+  display: block;
+  height: 60px;
+  width: auto;
+}
+h2 {
+  margin: 0;
+  line-height: 1.25;
+}
+
+p {
+  margin: 0 0 0.6rem;
+}
+
+
+header {
+  background: linear-gradient(135deg, var(--principale), var(--principale-fonce));
+  color: #fff;
+  padding: 1.5rem 2rem 1rem;
+  box-shadow: var(--ombre);
+}
+
+header h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+nav {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  transition: background 0.2s;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+
+form {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: var(--rayon);
+  box-shadow: var(--ombre);
+}
+
+form h2 {
+  margin-bottom: 0.5rem;
+  color: var(--principale);
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--texte-doux);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.65rem 0.8rem;
+  font: inherit;
+  color: var(--texte);
+  background: #fff;
+  border: 1px solid var(--bordure);
+  border-radius: 8px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--principale);
+  box-shadow: 0 0 0 3px var(--principale-pale);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Case à cocher alignée avec son texte */
+label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.2rem;
+  padding: 0.7rem 0.9rem;
+  background: var(--principale-pale);
+  border-radius: 8px;
+  color: var(--principale-fonce);
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--principale);
+}
+
+
+button {
+  margin-top: 1rem;
+  margin-right: 0.5rem;
+  padding: 0.65rem 1.3rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--principale);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: var(--principale-fonce);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+.carte {
+  background: #fff;
+  padding: 1.5rem;
+  margin-bottom: 1.25rem;
+  border-left: 6px solid var(--principale);
+  border-radius: var(--rayon);
+  box-shadow: var(--ombre);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.carte:hover {
+  box-shadow: var(--ombre-forte);
+  transform: translateY(-2px);
+}
+
+.carte h2 {
+  margin-bottom: 0.6rem;
+  font-size: 1.3rem;
+}
+
+.carte em {
+  display: block;
+  margin-top: 0.4rem;
+  padding-left: 0.8rem;
+  border-left: 3px solid var(--principale-pale);
+  color: var(--texte-doux);
+  font-size: 0.92rem;
+}
+
+.carte input {
+  margin-top: 0.5rem;
+}
+
+.carte button:last-of-type {
+  background: var(--succes);
+}
+
+.carte button:last-of-type:hover {
+  background: var(--succes-fonce);
+}
+
+.etiquette {
+  display: inline-block;
+  margin-right: 0.3rem;
+  padding: 0.15rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--principale-fonce);
+  background: var(--principale-pale);
+  border-radius: 999px;
+}
+
+.confidentiel {
+  color: #fff;
+  background: #2b2530;
+}
+
+
+table {
+  width: 100%;
+  overflow: hidden;
+  background: #fff;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: var(--rayon);
+  box-shadow: var(--ombre);
+}
+
+th {
+  padding: 0.9rem 1rem;
+  font-size: 0.85rem;
+  text-align: left;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--principale-fonce);
+  background: var(--principale-pale);
+}
+
+td {
+  padding: 0.85rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--bordure);
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tbody tr:hover {
+  background: #faf6fb;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 1rem;
+  }
+
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  nav {
+    flex-wrap: wrap;
+  }
+
+  main {
+    margin: 1rem auto;
+  }
+}
